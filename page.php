@@ -1,4 +1,4 @@
-<?php
+<?php get_header();
 
 	while(have_posts()) {
 		the_post(); ?>
@@ -8,4 +8,5 @@
 
 	<a href="<?php echo home_url(); ?>">Home</a>
 	<?php
+	get_footer();
 ?>
