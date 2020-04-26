@@ -6,7 +6,4 @@
 		<?php the_content(); ?>
 	<?php } ?>
 
-	<a href="<?php echo home_url(); ?>">Home</a>
-	<?php
-	get_footer();
 ?>
