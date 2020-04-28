@@ -15,6 +15,9 @@
 
 	function uni_features() {
 		add_theme_support('title-tag');
+		register_nav_menu('headerMenu', 'Header Menu');
+		register_nav_menu('footerMenu1', 'Explore Menu');
+		register_nav_menu('footerMenu2', 'Learn Menu');
 	}
 
 	add_action('after_setup_theme','uni_features');
