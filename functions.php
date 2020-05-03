@@ -34,17 +34,35 @@
 	// EVENT CUSTOM POST TYPE
 	function uni_post_types() {
 		register_post_type('event', array(
-			'public' => true,
 			'menu_icon' => 'dashicons-calendar',
+			'rewrite' => array('slug' => 'events'),
+			'supports' => array(
+				'author',
+				'comments',
+				'custom-fields',
+				'editor',
+				'excerpt',
+				'page-attributes',
+				'post-formats',
+				'revisions',
+				'title',
+				'thumbnail',
+				'trackbacks',
+			),
+			'has_archive' => true,
+			'public' => true,
 			'labels' => array(
 				'name' => 'Events',
 				'add_new_item' => 'Add New Event',
 				'edit_item' => 'Edit Event',
 				'all_items' => 'All Events',
-				'singular_name' => 'Event'
+				'singular_name' => 'Event',
 			)
 		));
 	}
 
 	// LOADING EVENT CUSTOM POST TYPE
 	add_action('init', 'uni_post_types');
+
+	// ADDS FEATURE IMAGE
+	add_theme_support( 'post-thumbnails' );
