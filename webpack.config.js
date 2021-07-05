@@ -1,13 +1,3 @@
-/*
-  SUPER IMPORTANT: This config assumes your theme folder is named
-  exactly 'fictional-university-theme' and that you have a folder
-  inside it named 'bundled-assets' - If you'd like to adapt this
-  config to work with your own custom folder structure and names
-  be sure to adjust the publicPath value on line #116. You do NOT
-  need to update any of the other publicPath settings in this file,
-  only the one on line #116.
-*/
-
 const currentTask = process.env.npm_lifecycle_event
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
@@ -84,7 +74,6 @@ if (currentTask == "devFast") {
         below this comment to look like this instead. I'm using this approach
         instead of just disabling Hot Module Replacement beacuse this way our
         CSS updates can still happen immediately without a page refresh.
-
         If you're using a slower computer and the new bundle is not ready
         by the time this is reloading the browser you can always just set the
         "hot" property a few lines below this to false instead of true. That
